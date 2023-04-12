@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gym</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gym.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700;800&display=swap" rel="stylesheet"> 
+<body>
+<div class="w-75 mx-auto py-4 ">
+    <h3 class="py-3 fw-bolder ">product managment system</h3>
+    <label for="productNameInput">productName :</label>
+    <input type="text" id="productNameInput" placeholder="please enter productName" class="form-control mb-2">
+    <label for="productPriceInput">productPrice :</label>
+    <input type="number" id="productPriceInput" placeholder="please enter productPrice" class="form-control mb-2">
+    <label for="productCatagoryInput">productCatagory :</label>
+    <input type="text" id="productCatagoryInput" placeholder="please enter productCatagory" class="form-control mb-2">
+    <label for="productDescriptionInput">productDescription :</label>
+    <textarea type="text" id="productDescriptionInput"  class="form-control mb-2">
+</textarea>
+<button class="btn btn-outline-primary "id="addBtn" onclick="addProduct()" >AddProduct</button>
+<button class="btn d-none btn-outline-primary " id="updateBtn" onclick="uploaded()" >update</button>
+
+</div>
+<div class="search w-75 mx-auto p-4">
+    <label for="search">search :</label>
+<input type="text" oninput="searchProduct(this.value)" class="form-control" placeholder="search by name" id="search"></div>
+<table class="table w-75 mx-auto">
+    <thead>
+        <th>index</th>
+        <th>productName</th>
+        <th>productPrice</th>
+        <th>productCatagory</th>
+        <th>productdescription</th>
+        <th>update</th>
+        <th>delete</th>
+    </thead>
+    <tbody id="TableBody">
+    
+    </tbody>
+</table>
+
+
+<script src="/js/gym.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+</body>
+</html>
